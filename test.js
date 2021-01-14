@@ -177,3 +177,43 @@
 //   console.log(makeArray(['Земля', 'Юпитер'], ['Нептун', 'Уран'], 2));
 //   console.log(makeArray(['Земля', 'Юпитер'], ['Нептун', 'Уран'], 4));
 //   console.log(makeArray(['Земля', 'Юпитер'], ['Нептун', 'Уран', 'Венера'], 0));
+
+// 2-17 Функция logNumbersInRange(start, end) логирует все целые числа в диапазоне от start до end включительно. Дополни тело функции так, чтобы она работала правильно.
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) { // Дополни эту строку
+//   console.log(i);
+// }
+
+
+// 2-18 Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+// function calculateTotal(number) {
+//     // Пиши код ниже этой строки
+//   let totalAmount = 0;
+//     for (let i = totalAmount; i <= number; i += 1) {
+//     totalAmount += i;
+//     }
+//     return totalAmount;
+      
+//     // Пиши код выше этой строки
+//   }
+    
+//     // Пиши код выше этой строки
+  
+
+// console.log(calculateTotal(1));
+//   console.log(calculateTotal(3));
+//   console.log(calculateTotal(7));
+//   console.log(calculateTotal(18));
+//   console.log(calculateTotal(24));
+//   console.log(calculateTotal());  
+
+
+// 2-19 Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
+// const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Дополни эту строку
+//   const fruit = fruits[i]; // Дополни эту строку
+//   console.log(fruit);
+// }
