@@ -217,3 +217,238 @@
 //   const fruit = fruits[i]; // Дополни эту строку
 //   console.log(fruit);
 // }
+
+
+// 2-20Напиши функцию calculateTotalPrice(order), которая принимает один параметр order - массив чисел, и рассчитывает общую сумму его элементов. Общая сумма элементов должна сохраняться в переменной total, которая возвращается, как результат работы функции.
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Пиши код ниже этой строки
+//   for (let i = 0; i < order.length; i += 1) {
+   
+//     total += order[i];}
+//   // Пиши код выше этой строки
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice());
+
+
+// ???2-21Напиши фукцнию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+// function findLongestWord(string) {
+//   // Пиши код ниже этой строки
+// const newArroy = string.split(" ");
+// let maxWord = '';
+// for (let i = 0; i < newArroy.length; i += 1) {
+//   if(newArroy[i].length > maxWord.length) {
+//     maxWord = newArroy[i];
+//   }
+// }
+//   return maxWord;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+// console.log(findLongestWord('Google do a roll'));
+// console.log(findLongestWord('May the force be with you'));
+
+
+// 2-22Дополни код функции createArrayOfNumbers(min, nax) так, чтобы она возвращала массив всех целых чисел от значения min до max.
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Пиши код ниже этой строки
+//   for (let i = min; i <= max; i += 1)
+//   {numbers.push(i);}
+//   // Пиши код выше этой строки
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+
+
+
+// 2-23 Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+// const newArray = [];
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if(numbers[i] > value) {
+//     newArray.push(numbers[i]);
+//   }
+// }
+// return newArray;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+
+
+// 2-24 Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
+
+// Дополни код функции так, что если:
+
+// фрукт есть в массиве, то функция возвращает true;
+// фрукта нет в массиве, то функция возвращает false.
+// function checkFruit(fruit) {
+//   const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
+
+//   return fruits.includes(fruit); // Дополни эту строку
+  
+// }
+// console.log(checkFruit('слива'));
+// console.log(checkFruit('мандарин'));
+// console.log(checkFruit('груша'));
+// console.log(checkFruit('Груша'));
+// console.log(checkFruit('яблоко'));
+
+
+// 2-25Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
+// function getCommonElements(array1, array2) {
+//   // Пиши код ниже этой строки
+// let newArray = [];
+// for (let i = 0; i < array1.length; i += 1) {
+//   if (array2.includes(array1[i])) {
+//       newArray.push(array1[i])}
+     
+//   }
+//   return newArray;
+//   // Пиши код выше этой строки
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4])) ;
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])) ;
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+
+
+// 2-26Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Пиши код ниже этой строки
+//   for (const itemOrder of order) {
+//     total += itemOrder;}
+//   // for (let i = 0; i < order.length; i += 1) {
+//   //   total += order[i];
+//   // }
+//   // Пиши код выше этой строки
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([]));
+
+
+// 2-27Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   const filteredNumbers = [];
+// for (const number of numbers) {
+// if (number > value) {
+//   filteredNumbers.push(number);
+// }
+// }
+
+
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   const number = numbers[i];
+
+//   //   if (number > value) {
+//   //     filteredNumbers.push(number);
+//   //   }
+//   // }
+
+//   return filteredNumbers;
+//   // Пиши код выше этой строки
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(ilterArray([12, 24, 8, 41, 76], 20));
+
+
+// 2-28Вместо того, чтобы возвращать результат деления, операция по модулю (%) возвращает целочисленный остаток от деления двух чисел - делимого и делителя.
+// Объявлена переменная a.
+// Значение переменной a это число 0.
+// Объявлена переменная b.
+// Значение переменной b это число 1.
+// Объявлена переменная c.
+// Значение переменной c это число 3.
+// Объявлена переменная d.
+// Значение переменной d это число 5.
+// Объявлена переменная e.
+// Значение переменной e это число 2.
+// const a = 3 % 1;
+// const b = 4 % 3;
+// const c = 11 % 8;
+// const d = 12 % 7;
+// const e = 8 % 3;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
+
+
+
+// 2-29Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка.
+// function getEvenNumbers(start, end) {
+//   // Пиши код ниже этой строки
+// const newArray = [];
+
+// for (let i = start; i <= end; i += 1) {
+// if (i % 2 === 0) {newArray.push(i);}
+// }
+// return newArray;
+  
+//   // Пиши код выше этой строки
+// }
+// console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(3, 11));
+// console.log(etEvenNumbers(6, 12));
+// console.log(getEvenNumbers(8, 8));
+// console.log(getEvenNumbers(7, 7));
+
+
+// 2-30Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+// console.log(number);
+
+https://github.com/goitacademy/javascript-homework/tree/master/homework-02
+
+
+// 2-32 Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+// function includes(array, value) {
+//     // Пиши код ниже этой строки
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === value) {return true;}
+    
+//   }
+//   return false
+  
+    
+//     // Пиши код выше этой строки
+//   }
+//   console.log(includes([1, 2, 3, 4, 5], 3));
+//   console.log(includes([1, 2, 3, 4, 5], 17));
+//   console.log(includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Юпитер'));
+//   console.log(includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Уран'));
